@@ -1,0 +1,1 @@
+{"version":1,"defects":{"CaptchaTest::testValidate":7,"RateLimiterTest::testIsAllowed":7,"RateLimiterTest::testRateLimitingResets":7},"times":{"CaptchaTest::testValidate":0.001,"HoneyPotTest::testValidate":0,"RateLimiterTest::testIsAllowed":0.005,"UserAgentBlockerTest::testIsAllowed":0,"RateLimiterTest::testRateLimitingResets":0}}

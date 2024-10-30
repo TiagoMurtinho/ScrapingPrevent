@@ -1,0 +1,365 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar__item {
+    position: relative;
+}
+
+.navbar__item a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__item a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.navbar__item a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5);
+}
+
+.form-container, .results-container {
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20vh auto auto;
+}
+
+.config-container {
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5vh auto auto;
+}
+
+.config-title, .form-title {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d6e9c6;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.config-form, .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.config-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.config-form-group, .form-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.config-form-group:nth-child(even), .form-group:nth-child(even) {
+    margin-left: 10px;
+}
+
+.config-form-label, .form-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.nome {
+    margin-right: 10px;
+}
+
+.config-form-checkbox, .form-checkbox {
+    margin-right: 10px;
+    accent-color: #4CAF50;
+    width: 20px;
+    height: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.recaptcha-group {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.g-recaptcha {
+    margin: 20px 0;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.form-submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.form-submit-button:hover {
+    background-color: #45a049;
+}
+
+.results-title {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.table-header-item {
+    padding: 10px;
+    text-align: left;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-cell {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table-row:hover {
+    background-color: #e9e9e9;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.config-form-input {
+    width: 20%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.config-form-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.config-span {
+    margin-left: 10px;
+}
+
+.sanction-container {
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20vh auto;
+}
+
+.sanction-title {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sanction-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sanction-form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sanction-form-label {
+    width: 300px;
+    color: #555;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.sanction-form-input {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-left: auto;
+}
+
+.sanction-form-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.sanction-submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.sanction-submit-button:hover {
+    background-color: #45a049;
+}
+
+.sanction-add-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.sanction-add-button:hover {
+    background-color: #0056b3;
+}
+
+.title-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sanction-delete-button {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sanction-edit-button:hover,
+.sanction-delete-button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
