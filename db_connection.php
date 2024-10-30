@@ -1,9 +1,9 @@
 <?php
 class Database {
-    private $host = 'localhost';
-    private $db_name = 'ScrapingPrevent';
-    private $username = 'root';
-    private $password = 'v;tF.Ap!3@£5}8a';
+    private $host = 'yourhost';
+    private $db_name = 'yourdb';
+    private $username = 'yourusername';
+    private $password = 'yourpassword';
     public $conn;
 
     public function getConnection() {
