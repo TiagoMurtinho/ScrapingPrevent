@@ -32,18 +32,18 @@
 
 ### Installation Steps
 
-1. Clone the repository:
+1. **Clone the repository**
     ```bash
     git clone https://github.com/your-username/ScrapingPrevent.git
     cd ScrapingPrevent
     ```
 
-2. Install dependencies with **Composer**:
+2. **Install dependencies with Composer**
     ```bash
     composer install
     ```
 
-3. Configure the `db_connection.php` file to connect to your database:
+3. **Configure the `db_connection.php` file to connect to your database**
     - Open the `db_connection.php` file and add the correct database information (host, user, password, database name).
     - Example:
       ```php
@@ -62,9 +62,26 @@
       ?>
       ```
 
-4. Set up the database permissions and create the necessary tables. The project may require specific SQL scripts, or you can manually create the tables as needed.
+4. **Set up the database**
 
-5. Access your local or production server (e.g., Apache or Nginx) and configure the project to be served from the directory where the code was cloned.
+    - **Create the database**:
+       The user should create a database in MySQL. The application will automatically create all the necessary tables the first time it is accessed. To create the database, run the following command in MySQL:
+       
+       ```sql
+       CREATE DATABASE ScrapingPrevent;
+       ```
+
+    - **Database permissions**:
+       Ensure that the MySQL user has the necessary permissions to access the database and create tables. The application will use the credentials configured in the `db_connection.php` file to connect to the database and create the tables automatically.
+
+    - **Initial execution**:
+       After creating the database, access the application for the first time. The application will check if the tables exist and, if not, it will create them automatically.
+
+5. **Access your local or production server**
+
+    - Configure your web server (e.g., Apache or Nginx) to serve the project from the directory where the code was cloned.
+    - Ensure that the web server has permission to read and write in the project directory.
+    - Once the server is configured, access the application in your browser to complete the setup. The first time the application is accessed, it will create the necessary database tables automatically.
 
 ## Configuration
 
