@@ -124,7 +124,7 @@ if ($config['user_agent_blocker'] === true) {
 }
 
 if ($config['blacklist_checker'] === true) {
-    $blacklistChecker = new BlacklistChecker('a3799fd9bb2d1974505418b50d4c0769b19a2fb4390bf58c32c177b123290b64941c1c1c28f14ec7');
+    $blacklistChecker = new BlacklistChecker('YourApiKey');
 } else {
     $blacklistChecker = false;
 }
