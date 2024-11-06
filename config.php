@@ -57,6 +57,7 @@ if ($cookie_id) {
     require_once 'db_connection.php';
     $database = new Database();
     $conn = $database->getConnection();
+    $database->createTables();
 
     $query = "SELECT config_type_id, config_value, penalty_value 
               FROM user_activity_has_config_type 
