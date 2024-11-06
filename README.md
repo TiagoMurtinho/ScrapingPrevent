@@ -29,6 +29,7 @@
 - **Composer** (PHP dependency manager)
 - **Web Server** (Apache, Nginx, etc.)
 - **MySQL Database**
+- **AbuseIPDB API Key** (Required to use the blacklisted IP check feature)
 
 ### Installation Steps
 
@@ -84,6 +85,29 @@
     - Once the server is configured, access the application in your browser to complete the setup. The first time the application is accessed, it will create the necessary database tables automatically.
 
 ## Configuration
+
+### Configuration of AbuseIPDB API Key
+
+To use the **AbuseIPDB** API for checking blacklisted IPs, you need to:
+
+1. **Create an account** on [AbuseIPDB](https://www.abuseipdb.com/).
+2. Once logged in, **generate an API key**.
+3. Open the `config.php` file located in the root of the project directory.
+4. Find the following line:
+
+    ```php
+    $blacklistChecker = new BlacklistChecker('YourApiKey');
+    ```
+
+5. Replace `'YourApiKey'` with your actual **AbuseIPDB API Key**:
+
+    ```php
+    $blacklistChecker = new BlacklistChecker('YourActualApiKey');
+    ```
+
+6. Save the `config.php` file.
+
+Now, your **ScrapingPrevent** application will be able to check if an IP is blacklisted using **AbuseIPDB**.
 
 ### Configuration Interface
 
